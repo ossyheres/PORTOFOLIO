@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio | Dinda Oktavia Salsabila</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600&display=swap');
+
+        :root {
+            --white: #FFFFFF;
+            --fanta-pink: #E91E63;
+            --baby-pink: #FCE4EC;
+            --soft-pink: #F8BBD0;
+            --accent-pink: #F06292;
+            --text-main: #4A4A4A;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--white);
+            color: var(--text-main);
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        nav {
+            position: fixed;
+            top: 0; width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 8%;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(15px);
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            color: var(--fanta-pink);
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .nav-links { display: flex; list-style: none; }
+        .nav-links li { margin-left: 30px; }
+        .nav-links a { text-decoration: none; color: var(--text-main); font-size: 0.9rem; font-weight: 500; transition: 0.3s; }
+        .nav-links a:hover { color: var(--fanta-pink); }
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 0 8%;
+            background: linear-gradient(135deg, #fff 0%, var(--baby-pink) 50%, var(--soft-pink) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content { max-width: 700px; z-index: 1; }
+        .hero-content h1 { font-family: 'Playfair Display', serif; font-size: 4.5rem; line-height: 1.1; margin-bottom: 20px; color: #333; }
+        .hero-content h1 span { color: var(--fanta-pink); }
+        .hero-content p { font-size: 1.1rem; margin-bottom: 35px; color: #666; font-weight: 300; }
+
+        .btn-group { display: flex; gap: 20px; align-items: center; }
+        .btn { display: inline-block; padding: 15px 40px; background: var(--fanta-pink); color: white; text-decoration: none; border-radius: 50px; font-weight: 600; transition: 0.3s; box-shadow: 0 10px 20px rgba(233, 30, 99, 0.2); }
+        .btn:hover { transform: translateY(-3px); box-shadow: 0 15px 25px rgba(233, 30, 99, 0.3); }
+        .btn-outline { color: var(--fanta-pink); text-decoration: none; font-weight: 600; display: flex; align-items: center; gap: 8px; transition: 0.3s; }
+        .btn-outline:hover { gap: 12px; }
+
+        .section { padding: 100px 8%; }
+        .section-header { text-align: center; margin-bottom: 70px; }
+        .section-header h2 { font-family: 'Playfair Display', serif; font-size: 2.8rem; position: relative; }
+        .section-header h2::after { content: ''; position: absolute; bottom: -15px; left: 50%; transform: translateX(-50%); width: 60px; height: 4px; background: var(--fanta-pink); border-radius: 10px; }
+
+        .about-container { display: flex; align-items: center; gap: 60px; max-width: 1200px; margin: 0 auto; }
+        .about-img { flex: 1; position: relative; animation: float 6s ease-in-out infinite; min-width: 350px; }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .about-img img { width: 100%; border-radius: 30px; border: 15px solid white; box-shadow: 0 30px 60px rgba(0,0,0,0.1); }
+        .about-text { flex: 1.5; }
+        .about-text h3 { font-family: 'Playfair Display', serif; font-size: 2rem; color: var(--fanta-pink); margin-bottom: 15px; }
+        .about-text p { margin-bottom: 20px; text-align: justify; color: #555; font-size: 1.05rem; }
+
+        .grid-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .card { 
+            background: var(--baby-pink); 
+            padding: 40px; 
+            border-radius: 25px; 
+            border: 1px solid var(--soft-pink);
+            transition: 0.4s;
+            box-shadow: 0 10px 20px rgba(233, 30, 99, 0.05);
+        }
+        .card:hover { transform: translateY(-10px); background: var(--soft-pink); box-shadow: 0 20px 40px rgba(233, 30, 99, 0.15); }
+        .card i { font-size: 2.3rem; color: var(--fanta-pink); margin-bottom: 20px; display: block; }
+        .card h3 { color: #333; margin-bottom: 10px; font-family: 'Playfair Display', serif; }
+        .card .date { color: var(--fanta-pink); font-size: 0.85rem; font-weight: 600; margin-bottom: 15px; display: block; }
+
+        .skills-tag { display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; }
+        .tag { background: white; color: var(--fanta-pink); padding: 12px 28px; border-radius: 50px; font-size: 0.9rem; font-weight: 600; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: 0.3s; border: 1px solid var(--baby-pink); }
+        .tag:hover { background: var(--fanta-pink); color: white; transform: translateY(-3px); }
+
+        .contact-container { display: flex; justify-content: center; gap: 50px; flex-wrap: wrap; }
+        .contact-item { text-align: center; text-decoration: none; color: #444; transition: 0.3s; }
+        .contact-item i { font-size: 2.5rem; color: var(--fanta-pink); margin-bottom: 15px; transition: 0.3s; }
+        .contact-item:hover i { transform: scale(1.2); }
+
+        footer { padding: 40px; text-align: center; background: #fafafa; color: #999; }
+
+        @media (max-width: 992px) {
+            .about-container { flex-direction: column; text-align: center; }
+            .about-img { min-width: 100%; max-width: 400px; }
+            .hero-content h1 { font-size: 3.2rem; }
+            .btn-group { justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">ossy.</div>
+        <ul class="nav-links">
+            <li><a href="#home">Beranda</a></li>
+            <li><a href="#about">Tentang</a></li>
+            <li><a href="#career">Pengalaman</a></li>
+            <li><a href="#skills">Keahlian</a></li>
+            <li><a href="#contact">Kontak</a></li>
+        </ul>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Creative <span>Portfolio</span> of Ossy</h1>
+            <p>S1 Sistem Informasi | Multidisciplinary Creator | Professional Hospitality</p>
+            <div class="btn-group">
+                <a href="#about" class="btn">Kenali Saya</a>
+                <a href="#contact" class="btn-outline">Hubungi Saya <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="section-header">
+            <h2>About Me</h2>
+        </div>
+        <div class="about-container">
+            <div class="about-img">
+                <img src="foto_formal_ossy.jpg.jpeg" alt="Dinda Oktavia Salsabila">
+            </div>
+            <div class="about-text">
+                <h3>Halo, Saya Ossy!</h3>
+                <p>
+                    Nama lengkap saya <strong>Dinda Oktavia Salsabila</strong>. Saya adalah lulusan S1 Sistem Informasi dari STMIK Mardira Bandung (2025) yang memiliki dedikasi tinggi, kepribadian adaptif, serta kemampuan komunikasi yang efektif.
+                </p>
+                <p>
+                    Dengan latar belakang pendidikan di bidang IT, saya memiliki pemahaman mendalam mengenai integrasi teknologi informasi untuk optimasi bisnis. Sejalan dengan itu, saya memiliki ketertarikan besar untuk berkarier di <strong>industri perbankan</strong>.
+                </p>
+                <p>
+                    Saya percaya bahwa kombinasi antara ketelitian teknis, kemampuan analisis, dan pengalaman saya dalam memberikan pelayanan prima (hospitality) akan menjadi aset berharga dalam mendukung transformasi digital yang dinamis.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="career" class="section" style="background-color: #fffafb;">
+        <div class="section-header">
+            <h2>Career Journey</h2>
+        </div>
+        <div class="grid-container">
+            <!-- Paling Baru -->
+            <div class="card">
+                <i class="fas fa-laptop-code"></i>
+                <span class="date">2025 | AmandaMart</span>
+                <h3>Admin Sistem</h3>
+                <p>Menganalisis pengendalian persediaan barang menggunakan metode teknis ABC untuk optimasi stok.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-video"></i>
+                <span class="date">2025 | Talent & Model</span>
+                <h3>Endorsement Model</h3>
+                <p>Menjadi model video promosi/endorse produk cake untuk salah satu Coffeeshop ternama, mengasah kemampuan presentasi produk secara visual.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-star"></i>
+                <span class="date">2024 - 2025 | Avoskin</span>
+                <h3>Brand Ambassador</h3>
+                <p>Membangun brand awareness melalui strategi pembuatan konten kreatif dan edukasi produk.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-file-alt"></i>
+                <span class="date">2024 | PVMBG</span>
+                <h3>Technical Writer</h3>
+                <p>Menyusun dokumentasi teknis sistem monitoring gunung berapi secara sistematis dan detail.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-users"></i>
+                <span class="date">2024 | Ruby Community</span>
+                <h3>Member</h3>
+                <p>Berjejaring aktif dalam komunitas teknologi untuk pengembangan sistem informasi terkini.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-mug-hot"></i>
+                <span class="date">2021 | Cafe Djabana</span>
+                <h3>Barista</h3>
+                <p>Memberikan pelayanan pelanggan prima dan memastikan kepuasan konsumen dalam lingkungan cepat.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section">
+        <div class="section-header">
+            <h2>Core Expertise</h2>
+        </div>
+        <div class="skills-tag">
+            <span class="tag"><i class="fas fa-check-double"></i> Service Excellence</span>
+            <span class="tag"><i class="fas fa-calculator"></i> Data Accuracy</span>
+            <span class="tag"><i class="fas fa-university"></i> Banking Operations</span>
+            <span class="tag"><i class="fas fa-comments"></i> Professional Communication</span>
+            <span class="tag"><i class="fas fa-chart-line"></i> System Analysis</span>
+            <span class="tag"><i class="fas fa-camera"></i> Content Production</span>
+            <span class="tag"><i class="fas fa-tasks"></i> Technical Writing</span>
+            <span class="tag"><i class="fas fa-user-friends"></i> Customer Relationship</span>
+            <span class="tag"><i class="fas fa-magic"></i> Image & Video Editing</span>
+            <span class="tag"><i class="fas fa-lightbulb"></i> Adaptive Learning</span>
+        </div>
+    </section>
+
+    <section id="contact" class="section" style="background-color: #fffafb;">
+        <div class="section-header">
+            <h2>Get In Touch</h2>
+        </div>
+        <div class="contact-container">
+            <a href="https://www.instagram.com/sabilaosy" target="_blank" class="contact-item">
+                <i class="fab fa-instagram"></i>
+                <span>Instagram</span>
+            </a>
+            <a href="https://www.tiktok.com/@sabylao" target="_blank" class="contact-item">
+                <i class="fab fa-tiktok"></i>
+                <span>TikTok</span>
+            </a>
+            <a href="https://wa.me/6289652643352" target="_blank" class="contact-item">
+                <i class="fab fa-whatsapp"></i>
+                <span>WhatsApp</span>
+            </a>
+            <a href="mailto:dindaossy@gmail.com" class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <span>Email</span>
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Dinda Oktavia Salsabila. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
