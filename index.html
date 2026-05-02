@@ -107,8 +107,12 @@
         .card h3 { color: #333; margin-bottom: 10px; font-family: 'Playfair Display', serif; }
         .card .date { color: var(--fanta-pink); font-size: 0.85rem; font-weight: 600; margin-bottom: 15px; display: block; }
 
-        .skills-tag { display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; }
-        .tag { background: white; color: var(--fanta-pink); padding: 12px 28px; border-radius: 50px; font-size: 0.9rem; font-weight: 600; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: 0.3s; border: 1px solid var(--baby-pink); }
+        .skills-container { max-width: 1000px; margin: 0 auto; }
+        .skills-group { margin-bottom: 40px; text-align: center; }
+        .skills-group h3 { font-family: 'Playfair Display', serif; margin-bottom: 20px; color: var(--fanta-pink); font-size: 1.5rem; }
+        .skills-tag { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+        
+        .tag { background: white; color: var(--fanta-pink); padding: 10px 22px; border-radius: 50px; font-size: 0.85rem; font-weight: 600; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: 0.3s; border: 1px solid var(--baby-pink); }
         .tag:hover { background: var(--fanta-pink); color: white; transform: translateY(-3px); }
 
         .contact-container { display: flex; justify-content: center; gap: 50px; flex-wrap: wrap; }
@@ -142,8 +146,8 @@
     <section id="home" class="hero">
         <div class="hero-content">
             <h1>Creative <span>Portfolio</span> of Ossy</h1>
-            <p>S1 Sistem Informasi | Multidisciplinary Creator | Professional Hospitality</p>
-            <div class="btn-group">
+            <p>S1 Sistem Informasi | Content Creator | excellence in service | Digital Enthusiast</p>    
+                    <div class="btn-group">
                 <a href="#about" class="btn">Kenali Saya</a>
                 <a href="#contact" class="btn-outline">Hubungi Saya <i class="fas fa-arrow-right"></i></a>
             </div>
@@ -161,13 +165,13 @@
             <div class="about-text">
                 <h3>Halo, Saya Ossy!</h3>
                 <p>
-                    Nama lengkap saya <strong>Dinda Oktavia Salsabila</strong>. Saya adalah lulusan S1 Sistem Informasi dari STMIK Mardira Bandung (2025) yang memiliki dedikasi tinggi, kepribadian adaptif, serta kemampuan komunikasi yang efektif.
+                    Perkenalkan Nama lengkap saya <strong>Dinda Oktavia Salsabila</strong>. biasa dipanggil  <strong>Ossy</strong> merupakan lulusan S1 Sistem Informasi dari STMIK Mardira Indonesia (2025) yang memiliki dedikasi tinggi, kepribadian adaptif, serta kemampuan komunikasi yang baik.
                 </p>
                 <p>
-                    Dengan latar belakang pendidikan di bidang IT, saya memiliki pemahaman mendalam mengenai integrasi teknologi informasi untuk optimasi bisnis. Sejalan dengan itu, saya memiliki ketertarikan besar untuk berkarier di <strong>industri perbankan</strong>.
+                    Dengan latar belakang pendidikan di bidang IT, saya memiliki pemahaman dalam pengembangan dan pemanfaatan teknologi informasi untuk mendukung efesiensi dan kebutuhan bisnis. Sejalan dengan itu, saya memiliki ketertarikan besar untuk berkarier di industri perbankan dan bidang yang berkaitan dengan pengolahan data atau sitem serta media kreatif.
                 </p>
                 <p>
-                    Saya percaya bahwa kombinasi antara ketelitian teknis, kemampuan analisis, dan pengalaman saya dalam memberikan pelayanan prima (hospitality) akan menjadi aset berharga dalam mendukung transformasi digital yang dinamis.
+                    Selain itu, Saya percaya bahwa kombinasi antara ketelitian, kemampuan analisis, teknis dalam mengolah data, kemampuan analisis sistem, dan pengalaman pelayanan prima (hospitality) dapat menjadi nilai tambah dalam memberikan konstribusi terbaik dilingkungan kerja yang dinamis.
                 </p>
             </div>
         </div>
@@ -178,7 +182,6 @@
             <h2>Career Journey</h2>
         </div>
         <div class="grid-container">
-            <!-- Paling Baru -->
             <div class="card">
                 <i class="fas fa-laptop-code"></i>
                 <span class="date">2025 | AmandaMart</span>
@@ -189,7 +192,7 @@
                 <i class="fas fa-video"></i>
                 <span class="date">2025 | Talent & Model</span>
                 <h3>Endorsement Model</h3>
-                <p>Menjadi model video promosi/endorse produk cake untuk salah satu Coffeeshop ternama, mengasah kemampuan presentasi produk secara visual.</p>
+                <p>Menjadi model video promosi produk untuk salah satu Coffeeshop ternama, mengasah kemampuan presentasi visual.</p>
             </div>
             <div class="card">
                 <i class="fas fa-star"></i>
@@ -222,17 +225,43 @@
         <div class="section-header">
             <h2>Core Expertise</h2>
         </div>
-        <div class="skills-tag">
-            <span class="tag"><i class="fas fa-check-double"></i> Service Excellence</span>
-            <span class="tag"><i class="fas fa-calculator"></i> Data Accuracy</span>
-            <span class="tag"><i class="fas fa-university"></i> Banking Operations</span>
-            <span class="tag"><i class="fas fa-comments"></i> Professional Communication</span>
-            <span class="tag"><i class="fas fa-chart-line"></i> System Analysis</span>
-            <span class="tag"><i class="fas fa-camera"></i> Content Production</span>
-            <span class="tag"><i class="fas fa-tasks"></i> Technical Writing</span>
-            <span class="tag"><i class="fas fa-user-friends"></i> Customer Relationship</span>
-            <span class="tag"><i class="fas fa-magic"></i> Image & Video Editing</span>
-            <span class="tag"><i class="fas fa-lightbulb"></i> Adaptive Learning</span>
+        
+        <div class="skills-container">
+            <!-- Hard Skills IT -->
+            <div class="skills-group">
+                <h3><i class="fas fa-terminal"></i> IT & Technical Skills</h3>
+                <div class="skills-tag">
+                    <span class="tag"><i class="fas fa-file-excel"></i> Microsoft Excel (Advanced)</span>
+                    <span class="tag"><i class="fas fa-file-word"></i> Microsoft Word</span>
+                    <span class="tag"><i class="fas fa-database"></i> Database Management</span>
+                    <span class="tag"><i class="fas fa-chart-line"></i> System Analysis</span>
+                    <span class="tag"><i class="fas fa-tasks"></i> Technical Documentation</span>
+                    <span class="tag"><i class="fas fa-code"></i> Basic Web Development</span>
+                </div>
+            </div>
+
+            <!-- Creative Skills -->
+            <div class="skills-group">
+                <h3><i class="fas fa-paint-brush"></i> Creative Production</h3>
+                <div class="skills-tag">
+                    <span class="tag"><i class="fas fa-camera"></i> Content Production</span>
+                    <span class="tag"><i class="fas fa-magic"></i> Image & Video Editing</span>
+                    <span class="tag"><i class="fas fa-bullhorn"></i> Digital Branding</span>
+                    <span class="tag"><i class="fas fa-mobile-alt"></i> Social Media Management</span>
+                </div>
+            </div>
+
+            <!-- Soft Skills -->
+            <div class="skills-group">
+                <h3><i class="fas fa-heart"></i> Professional Soft Skills</h3>
+                <div class="skills-tag">
+                    <span class="tag"><i class="fas fa-comments"></i> Professional Communication</span>
+                    <span class="tag"><i class="fas fa-user-friends"></i> Customer Relationship</span>
+                    <span class="tag"><i class="fas fa-check-double"></i> Service Excellence</span>
+                    <span class="tag"><i class="fas fa-lightbulb"></i> Adaptive Learning</span>
+                    <span class="tag"><i class="fas fa-bullseye"></i> High Attention to Detail</span>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -245,7 +274,7 @@
                 <i class="fab fa-instagram"></i>
                 <span>Instagram</span>
             </a>
-            <a href="https://www.tiktok.com/@sabylao" target="_blank" class="contact-item">
+            <a href="https://www.tiktok.com/@4you.szy?_r=1&_t=ZS-961kxEOx81E" target="_blank" class="contact-item">
                 <i class="fab fa-tiktok"></i>
                 <span>TikTok</span>
             </a>
